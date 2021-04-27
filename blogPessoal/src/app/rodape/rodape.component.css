@@ -1,0 +1,36 @@
+.social-network {
+    list-style: none;
+    display: flex;
+
+    padding: 0;
+
+}
+
+.social-network li {
+    margin: 0;
+    padding: 5px;
+
+}
+
+.bi {
+    font-size: 35pt;
+    color: white;
+
+    padding: 10px;
+
+}
+
+.bi-facebook:hover {
+    color: #3b5998;
+
+}
+
+.bi-instagram:hover {
+    color: #c13584;
+
+}
+
+.bi-linkedin:hover {
+    color: #0072b1;
+
+}
