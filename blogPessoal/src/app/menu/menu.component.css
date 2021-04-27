@@ -4,6 +4,81 @@
 }
 
 a {
+    text-decoration: none;
+
     cursor: pointer;
+
+}
+
+/* HEADER - PADDING */
+.paddingHeader {
+    padding: 5%;
+
+}
+
+/* HEADER - MENU - LOGO */
+header .logo {
+    width: 475px;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* HEADER - MENU - SOCIAL MIDIAS */
+header .socialMedias {
+    width: 475px;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+header .socialMedias .iconMedia {
+    padding: 2.5%;
+    margin: 0.5%;
+
+    width: 11%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--background-color-button);   
+    border-radius: 3px 3px 3px 3px;
+
+}
+
+header .socialMedias .iconMedia .bi {
+    color: var(--text-white);
+
+}
+
+@media(max-width: 600px){
+    .redimensionamento {
+        justify-content: center !important;
+        flex-direction: column;
+
+        margin-left: 0%;
+        padding: 0 !important;
+    }
+
+    .redimensionamento img {
+        width: 25%;
+        height: auto;
+
+        transition: width, .5s ease;
+
+    }
+
+    .redimensionamento a p {
+        margin: 0 !important;
+
+    }
 
 }
