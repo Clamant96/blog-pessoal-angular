@@ -71,12 +71,16 @@ hr {
 :root {
     --text-default: #262626;
     --text-title: #303030;
+    --text-input: #6e6e6e;
     --text-author: #00000080;
     --text-white: #f1f1f1;
+    --text-white-light: #ffffff;
+    --text-link: #191919;
 
     --border-style-search: #e8e8e8;
 
     --background-color-button: #3bc;
+    --background-color-button-hover: rgb(43, 161, 177);
     --background-color-copyright: #191919;
 
 }

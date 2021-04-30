@@ -59,6 +59,11 @@ header .socialMedias .iconMedia .bi {
 
 }
 
+.texto {
+    font-family: 'Amaranth', sans-serif;
+
+}
+
 @media(max-width: 600px){
     .redimensionamento {
         justify-content: center !important;
