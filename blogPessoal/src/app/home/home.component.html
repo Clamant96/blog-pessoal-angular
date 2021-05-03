@@ -64,7 +64,8 @@
             <textarea name="texto" class="form-control" id="texto" rows="3" placeholder="Digite seu texto aqui..."></textarea>
         </div>
         <div class="form-group">
-            <label for="texto">Escolha um tema ou <a href="#">cadastre um novo</a>: </label>
+            <!-- O ATRIBUTO data-dismiss="modal", FAZ COM QUE O ITEM INFORMADO SEJA FINALIZADO POR COMPLETO -->
+            <label for="texto">Escolha um tema ou <a routerLink='/tema' data-dismiss="modal">cadastre um novo</a>: </label>
             <select class="form-control" name="tema" id="tema">
                 <option value="">Temas</option>
             </select>
