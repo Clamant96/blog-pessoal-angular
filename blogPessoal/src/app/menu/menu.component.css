@@ -27,6 +27,13 @@ header .logo {
 
 }
 
+header .logo a {
+    text-decoration: none;
+
+    color: var(--text-link);
+
+}
+
 /* HEADER - MENU - SOCIAL MIDIAS */
 header .socialMedias {
     width: 475px;
@@ -52,10 +59,17 @@ header .socialMedias .iconMedia {
     background-color: var(--background-color-button);   
     border-radius: 3px 3px 3px 3px;
 
+    transition: background-color, .3s ease-in-out;
+
 }
 
 header .socialMedias .iconMedia .bi {
     color: var(--text-white);
+
+}
+
+header .socialMedias .iconMedia:hover {
+    background-color: var(--background-color-button-hover);
 
 }
 
