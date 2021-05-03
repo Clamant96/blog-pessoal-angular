@@ -28,4 +28,14 @@ export class HomeComponent implements OnInit {
 
   }
 
+  publicarOver() {
+    window.document.querySelector('#publicacao')?.setAttribute('style', 'background-color: var(--button-ok) !important;');
+
+  }
+
+  publicarOut() {
+    window.document.querySelector('#publicacao')?.setAttribute('style', 'background-color: var(--background-color-button) !important;');
+
+  }
+
 }

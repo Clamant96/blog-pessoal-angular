@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+<!--<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -6,11 +6,9 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto d-flex align-items-center">
         <li class="nav-item active">
-          <!-- CRIA UMA INTERPOLACAO PARA TRAZER OS DADOS ARMAZEADOS DE ENVIROPMENT E APRESENTALAS AO USUARIO -->
           <img src="{{foto}}" alt="Imagem do usuario" width="50px" height="50px" class="img-fluid rounded-circle">
         </li>
         <li class="nav-item pl-3">
-          <!-- CRIA UMA INTERPOLACAO PARA TRAZER OS DADOS ARMAZEADOS DE ENVIROPMENT E APRESENTALAS AO USUARIO -->
           <p class="m-0 font-weight-bold text-white .fs-16">Olá, {{nome}}</p>
         </li>
         <li class="nav-item pl-3">
@@ -26,7 +24,7 @@
         </li>
       </ul>
     </div>
-</nav>
+</nav>-->
 
 <!-- HEADER / SOCIAL-->
 <header class="container-fluid d-flex flex-wrap justify-content-between paddingHeader">
@@ -55,9 +53,17 @@
 <!-- SECTION / PERFIL -->
 <section class="container-fluid ">
     <div class="container pl-0 pb-2 pm-2 pr-2 d-flex justify-content-start align-items-center redimensionamento">
+        <!-- CRIA UMA INTERPOLACAO PARA TRAZER OS DADOS ARMAZEADOS DE ENVIROPMENT E APRESENTALAS AO USUARIO -->
         <img src="{{foto}}" alt="Imagem do usuario" width="60px" height="60px" class="img-fluid rounded-circle">
         <a href="#">
+            <!-- CRIA UMA INTERPOLACAO PARA TRAZER OS DADOS ARMAZEADOS DE ENVIROPMENT E APRESENTALAS AO USUARIO -->
             <p class="ml-4 m-0 font-weight-bold .fs-16 texto">Olá, {{nome}}</p>
         </a>
     </div>
+    <!--<div class="container texto">
+      <div class="botoes">
+          <button class="botao" data-toggle="modal" data-target="#novaPostagem">Nova Postagem</button>
+          <a class="botao-outline" href="#postagens">Ver Postagens</a>
+      </div>
+    </div>-->
 </section>
