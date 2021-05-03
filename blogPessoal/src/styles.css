@@ -12,6 +12,11 @@
 }
 
 /* APLICANDO CONFIGURACOES GLOBAIS PARA SEU PROJETO */
+html {
+    scroll-behavior: smooth;
+
+}
+
 html, body {
     height: 100%;
 

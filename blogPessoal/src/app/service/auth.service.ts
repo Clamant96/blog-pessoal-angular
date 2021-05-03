@@ -29,4 +29,20 @@ export class AuthService {
     /* O METODO RETORNA O TIPO User, E INSERE O DADO  */
     return this.http.post<User>(`${this.serverPort}/usuarios/cadastrar`, user);
   }
+
+  /* RETONA UM VALOR true OU false CASO O TOKEN ESTA PREENCHIDO, CASO ESTEJA VAZIO RETONA false, CASO ESTEJA COM DADOS RETONA true*/
+  logado() {
+    /* CRIA UMA VARIAVEL BOOLEAN */
+    let ok: boolean = false;
+
+    /* CRIA UMA CONDIZIONAL, CASO MEU TOKEN QUE VEM DA MINHA VARIAVEL BLOBAL, ESTEJA COM ALGUM DADO, ATRIBUA 'true' A MINHA VARIAVEL 'ok' */
+    if(environment.token != '') {
+      /* ATRIBUI 'true' A VARAIVEL 'ok' */
+      ok = true;
+
+    }
+
+    /* RETORNA O VALOR DA VARIAVEL */
+    return ok;
+  }
 }

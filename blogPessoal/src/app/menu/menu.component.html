@@ -6,10 +6,12 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto d-flex align-items-center">
         <li class="nav-item active">
-          <img src="https://i.imgur.com/iFSKF8B.jpg" alt="Imagem do usuario" width="50px" height="50px" class="img-fluid rounded-circle">
+          <!-- CRIA UMA INTERPOLACAO PARA TRAZER OS DADOS ARMAZEADOS DE ENVIROPMENT E APRESENTALAS AO USUARIO -->
+          <img src="{{foto}}" alt="Imagem do usuario" width="50px" height="50px" class="img-fluid rounded-circle">
         </li>
         <li class="nav-item pl-3">
-          <p class="m-0 font-weight-bold text-white .fs-16">Nome do Usuário</p>
+          <!-- CRIA UMA INTERPOLACAO PARA TRAZER OS DADOS ARMAZEADOS DE ENVIROPMENT E APRESENTALAS AO USUARIO -->
+          <p class="m-0 font-weight-bold text-white .fs-16">Olá, {{nome}}</p>
         </li>
         <li class="nav-item pl-3">
             <a href="#">
@@ -20,7 +22,7 @@
 
       <ul class="navbar-nav ml-auto d-flex align-items-center">
         <li class="nav-item active">
-            <a class="text-white .fs-16 font-weight-bold">Sair <i class="bi bi-box-arrow-right"></i></a>
+            <a (click)='sair()' class="text-white .fs-16 font-weight-bold">Sair <i class="bi bi-box-arrow-right"></i></a>
         </li>
       </ul>
     </div>
@@ -44,7 +46,7 @@
     <a class="iconMedia" href="#">
         <i class="bi bi-youtube"></i>
     </a>
-    <a class="iconMedia" href="#">
+    <a (click)='sair()' class="iconMedia" href="#">
         <i class="bi bi-box-arrow-right"></i>
     </a>
   </div>
@@ -53,9 +55,9 @@
 <!-- SECTION / PERFIL -->
 <section class="container-fluid ">
     <div class="container pl-0 pb-2 pm-2 pr-2 d-flex justify-content-start align-items-center redimensionamento">
-        <img src="https://i.imgur.com/iFSKF8B.jpg" alt="Imagem do usuario" width="60px" height="60px" class="img-fluid rounded-circle">
+        <img src="{{foto}}" alt="Imagem do usuario" width="60px" height="60px" class="img-fluid rounded-circle">
         <a href="#">
-            <p class="ml-4 m-0 font-weight-bold .fs-16 texto">Nome do Usuário</p>
+            <p class="ml-4 m-0 font-weight-bold .fs-16 texto">Olá, {{nome}}</p>
         </a>
     </div>
 </section>

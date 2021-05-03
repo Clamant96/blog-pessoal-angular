@@ -18,6 +18,7 @@ export class CadastrarComponent implements OnInit {
   tipoUsuario: string;
 
   constructor(
+    /* INGETA AS DEPENDENCIAS PARA O COMPONENTE */
     private authService: AuthService,
     private router: Router
 

@@ -11,22 +11,28 @@ import { AuthService } from '../service/auth.service';
 })
 export class EntrarComponent implements OnInit {
 
+  /* INSTANCIA UM NOVO USUARIO PARA SER LOGADO */
   userLogin: UserLogin = new UserLogin();
 
   constructor(
+    /* INGETA AS DEPENDENCIAS PARA O COMPONENTE */
     private auth: AuthService,
     private router: Router
   ) { }
 
+  /* QUANDO MINHA PAGINA INICIALIZAR FACA ISSO */
   ngOnInit() {
+    // FAZ COM QUE O SCROLL SEMPRE FIQUE NO TOPO DA TELA AO INICIALIZAR A APLICACAO
     window.scroll(0,0);
   }
 
+  /* VALIDA O ACESSO DE UM USUARIO AO SISTEMA */
   entrar() {
     this.auth.entrar(this.userLogin).subscribe((resp: UserLogin) => {
       this.userLogin = resp;
 
-      environment.token = this.userLogin.token;
+      /* ARMAZENA OS DADOS COLETADOS A VARIAVEIS GLOBAIS */
+      environment.token = this.userLogin.token; // ARMAZENA TOKEN PARA QUE POSSAMOS VALIDAR O ACESSO DO USUARIO NO SISTEMA
       environment.nome = this.userLogin.nome;
       environment.foto = this.userLogin.foto;
       environment.id = this.userLogin.id;
@@ -36,7 +42,10 @@ export class EntrarComponent implements OnInit {
       console.log('Foto: '+ environment.foto);
       console.log('ID: '+ environment.id);
 
+      /* REDIRECIONA O USUARIO CASO O LOGIN TENHA SIDO BEM SUCEDIDO */
       this.router.navigate(['/home']);
+
+      /*  TRAZ UMA MENSAGEM DE ERRO, CASO OS DADOS NAO SEJAM VALIDOS*/
     }, erro => {
       if(erro.status == 500) {
         alert('Usuario ou senha estao incorretos.');
