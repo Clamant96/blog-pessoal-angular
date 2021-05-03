@@ -132,6 +132,8 @@
 
     font-weight: 500;
 
+    transition: border, .3s ease-in-out;
+
 }
 
 .botoes .botao-outline:hover {
