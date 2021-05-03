@@ -38,4 +38,6 @@
 .footer-copyright {
     background-color: var(--background-color-copyright);
 
+    font-family: 'Amaranth', sans-serif;
+
 }

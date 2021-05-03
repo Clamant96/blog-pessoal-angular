@@ -141,6 +141,11 @@
 
 }
 
+.habilitar-resposivo {
+    display: none;
+
+}
+
 @media(max-width: 600px){
     .container nav .justify-content-start {
         justify-content: center !important;
@@ -161,6 +166,11 @@
     .botoes .botao-outline {
         padding: 1% 2%;
 
+    }
+
+    .habilitar-resposivo {
+        display: block;
+    
     }
 
 }

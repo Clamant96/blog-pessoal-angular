@@ -18,11 +18,14 @@ a {
 
 /* HEADER - MENU - LOGO */
 header .logo {
+    margin-left: 10%;
+
     width: 475px;
     height: auto;
 
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    flex-direction: column;
     justify-content: center;
 
 }
@@ -31,6 +34,11 @@ header .logo a {
     text-decoration: none;
 
     color: var(--text-link);
+
+}
+
+header .logo p {
+    margin: 0;
 
 }
 
@@ -73,8 +81,40 @@ header .socialMedias .iconMedia:hover {
 
 }
 
+header .socialMedias .iconPerfil {
+    margin-right: 4%;
+
+    width: 11%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+header .socialMedias .iconPerfil img {
+    width: 48px;
+    height: auto;
+
+    border-radius: 3px;
+
+}
+
 .texto {
     font-family: 'Amaranth', sans-serif;
+
+}
+
+.habilitar-resposivo {
+    display: none;
+
+}
+
+.botao-postagem:hover:hover {
+    background-color: var(--button-ok) !important;
+
+    color: var(--text-link) !important;
 
 }
 
@@ -159,6 +199,34 @@ header .socialMedias .iconMedia:hover {
     .botao, .botao-outline {
         padding: 1% 1.5%;
 
+    }
+
+    header .logo {
+        margin-left: 0%;
+        
+        width: 475px;
+        height: auto;
+    
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    
+    }
+
+    header .socialMedias .iconPerfil, .desabilitar {
+        display: none;
+
+    }
+
+    .habilitar-resposivo {
+        display: block;
+    
+    }
+
+    .botao-postagem {
+        display: none !important;
+    
     }
 
 }
