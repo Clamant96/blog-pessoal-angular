@@ -34,8 +34,8 @@
           <a class="nav-item nav-link texto" id="nav-minhasPostagens-tab" data-toggle="tab" href="#minhasPostagens" role="tab" aria-controls="nav-minhasPostagens" aria-selected="false">Minhas Postagens</a>
           <a class="nav-item nav-link texto" id="nav-postagemTema-tab" data-toggle="tab" href="#postagemTema" role="tab" aria-controls="nav-postagemTema" aria-selected="false">Postagem por Tema</a>
         </div>
-      </nav>
-      <div class="tab-content texto" id="nav-tabContent">
+    </nav>
+    <div class="tab-content texto" id="nav-tabContent">
         <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel" aria-labelledby="nav-todasPostagens-tab">
             Todas as Postagens
         </div>
@@ -45,7 +45,7 @@
         <div class="tab-pane fade" id="postagemTema" role="tabpanel" aria-labelledby="nav-postagemTema-tab">
             Postagens por Tema
         </div>
-      </div>
+    </div>
 </div>
 
 <!-- Modal -->
@@ -69,7 +69,7 @@
             </div>
             <div class="form-group texto">
                 <!-- O ATRIBUTO data-dismiss="modal", FAZ COM QUE O ITEM INFORMADO SEJA FINALIZADO POR COMPLETO -->
-                <label class="texto-gray" for="texto">Escolha um tema ou <a class="texto-link" routerLink='/tema' data-dismiss="modal">cadastre um novo</a>: </label>
+                <label class="texto-gray" for="texto">Escolha um tema ou <a class="texto-link" (click)='remover()' routerLink='/tema' data-dismiss="modal">cadastre um novo</a>: </label>
                 <select class="form-control texto-input" name="tema" id="tema">
                     <option value="">Temas</option>
                 </select>

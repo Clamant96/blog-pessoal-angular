@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
   constructor(
     private router: Router
   ) { }
-  
+
   /* AO SER CARREGADO O COMPONENT home, VERIFIQUE A CONDICAO */
   ngOnInit() {
     /* VERIFICA SE O VALOR CONTIDO DENTRO DO TOKEN NO VALOR GLOBAL E IGUAL A VAZIO/NULO */
@@ -35,6 +35,14 @@ export class HomeComponent implements OnInit {
 
   publicarOut() {
     window.document.querySelector('#publicacao')?.setAttribute('style', 'background-color: var(--background-color-button) !important;');
+
+  }
+
+  remover() {
+    if(window.document.URL != '/home') {
+      window.document.querySelector('.botao-postagem')?.setAttribute('style', 'display: none !important;');
+
+    }
 
   }
 

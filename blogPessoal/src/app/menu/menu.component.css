@@ -42,6 +42,11 @@ header .logo p {
 
 }
 
+header .margem {
+  margin-right: 5%;
+
+}
+
 /* HEADER - MENU - SOCIAL MIDIAS */
 header .socialMedias {
     width: 475px;
@@ -64,7 +69,7 @@ header .socialMedias .iconMedia {
     align-items: center;
     justify-content: center;
 
-    background-color: var(--background-color-button);   
+    background-color: var(--background-color-button);
     border-radius: 3px 3px 3px 3px;
 
     transition: background-color, .3s ease-in-out;
@@ -173,7 +178,7 @@ header .socialMedias .iconPerfil img {
         justify-content: center !important;
         flex-direction: column;
 
-        margin-left: 0%;
+        /*margin-left: 0%;*/
         padding: 0 !important;
     }
 
@@ -193,7 +198,7 @@ header .socialMedias .iconPerfil img {
     .botoes {
         display: flex;
         justify-content: center;
-    
+
     }
 
     .botao, .botao-outline {
@@ -203,15 +208,15 @@ header .socialMedias .iconPerfil img {
 
     header .logo {
         margin-left: 0%;
-        
+
         width: 475px;
         height: auto;
-    
+
         display: flex;
         align-items: center;
         flex-direction: column;
         justify-content: center;
-    
+
     }
 
     header .socialMedias .iconPerfil, .desabilitar {
@@ -221,12 +226,26 @@ header .socialMedias .iconPerfil img {
 
     .habilitar-resposivo {
         display: block;
-    
+
     }
 
     .botao-postagem {
         display: none !important;
-    
+
+    }
+
+    /* HEADER - PADDING */
+    .paddingHeader {
+      padding: 5%;
+
+      display: flex !important;
+      justify-content: center !important;
+
+    }
+
+    header .margem {
+      margin-right: 0%;
+
     }
 
 }

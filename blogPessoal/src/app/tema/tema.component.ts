@@ -29,4 +29,14 @@ export class TemaComponent implements OnInit {
 
   }
 
+  ajustar() {
+    if(window.document.URL != '/home') {
+      window.document.querySelector('.botao-postagem')?.setAttribute('style', 'display: block !important;');
+      window.document.querySelector('.botao-postagem')?.setAttribute('style', 'justify-content: center !important;');
+      window.document.querySelector('.botao-postagem')?.setAttribute('style', 'align-items: center !important;');
+
+    }
+
+  }
+
 }
