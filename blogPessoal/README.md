@@ -1,5 +1,11 @@
 # BlogPessoal
 
+## Tela de Login
+![alt text](https://i.imgur.com/g5IJ3yH.png)
+
+## Tela de Home
+![alt text](https://i.imgur.com/JGaRUJi.png)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.10.
 
 ## Development server
