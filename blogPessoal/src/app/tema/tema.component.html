@@ -36,8 +36,10 @@
           <div class="row mt-4">
               <div class="col-md-12">
                   <div class="form-group resposividade-botao">
-                      <input type="text" class="form-control" id="descricao" placeholder="Digite a descrição do tema">
-                      <button class="botao margem-botao">Cadastrar</button>
+                      <!-- VERIFICA SE OS DADOS INSERIDOS TEPO USUARIO, REALMENTE PERTENCEM A CLASSE TEMA -->
+                      <input [(ngModel)]='tema.descricao' type="text" class="form-control" id="descricao" placeholder="Digite a descrição do tema">
+                      <!-- CHAMA A FUNCAO CRIADA cadastrar() DENTRO DA CLASSE, QUE TEM COMO FUNCAO, CADASTRAR O OBJETO TEMA -->
+                      <button class="botao margem-botao" (click)='cadastrar()'>Cadastrar</button>
                   </div>
               </div>
           </div>
@@ -51,28 +53,19 @@
                     <thead>
                       <tr>
                         <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
+                        <th scope="col">Descrição</th>
+                        <th scope="col">Modificação</th>
                       </tr>
                     </thead>
                     <tbody class="tr">
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
+                      <!-- CRIA UM LOOP PARA IMPRIMIR NA TELA TODOS OS DADOS CONTIDOS DENTRO DA listaTema ==> Resposavel por armazenar os dados vindos da tabela Tema -->
+                      <tr *ngFor='let item of listaTema'>
+                        <th>{{item.id}}</th>
+                        <td>{{item.descricao}}</td>
+                        <td class="d-flex justify-content-end">
+                          <button class="btn btn-info mr-3">Editar</button>
+                          <button class="btn btn-danger">Apagar</button>
+                        </td>
                       </tr>
                     </tbody>
                   </table>
