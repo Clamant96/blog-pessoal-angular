@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
+import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
+import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 import { EntrarComponent } from './entrar/entrar.component';
 import { HomeComponent } from './home/home.component';
 import { TemaComponent } from './tema/tema.component';
@@ -8,19 +10,19 @@ import { TemaComponent } from './tema/tema.component';
 const routes: Routes = [
   /* ACESSO VAZIO */
   {
-    path: '', 
-    redirectTo: 'login', 
+    path: '',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   /* ============  */
 
   /* MINHA ROTAS DE PAGINACAO */
   {
-    path: 'login', 
+    path: 'login',
     component: EntrarComponent
   },
   {
-    path: 'cadastrar', 
+    path: 'cadastrar',
     component: CadastrarComponent
   },
   {
@@ -30,6 +32,13 @@ const routes: Routes = [
   {
     path: 'tema',
     component: TemaComponent
+  },
+  {
+    /* PASSANDO PARAMETROS POR ROTAS */
+    path: 'tema-edit/:id', component: TemaEditComponent
+  },
+  {
+    path: 'tema-delete/:id', component: TemaDeleteComponent
   }
 
 ];

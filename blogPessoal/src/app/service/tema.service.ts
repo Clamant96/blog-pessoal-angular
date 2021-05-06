@@ -32,11 +32,32 @@ export class TemaService {
     return this.http.get<Tema[]>(`${this.serverPort}/tema`, this.autorizacao);
   }
 
+  /* CRIA UM METODO GET RESPOSAVEL POR PESQUISAR UMA TEMA POR ID ESPECIFICO */
+  findByIdTema(id: number): Observable<Tema> {
+
+    /* RETORNAMOS O OBJETO TEMA POR MEIO DE SEU ID */
+    return this.http.get<Tema>(`${this.serverPort}/tema/${id}`, this.autorizacao);
+  }
+
   /* CRIA UM METODO POST CADASTRAR UM DADO DENTRO DA BASE DE DADOS, NESSE CASO RECEBEMOS COMO PARATRO UM OBJETO, NO CASO Tema */
   portTema(tema: Tema): Observable<Tema> {
 
     /* RETORNAMOS O ATRIBUTO RECEBIDO DO USUARIO E O TOKEN */
     return this.http.post<Tema>(`${this.serverPort}/tema`, tema, this.autorizacao);
+  }
+
+  /* CRIA UM METODO PUT ATUALIZA UM DADO JA EXISTENTE INFORMADO PELO USUARIO */
+  putTema(tema: Tema): Observable<Tema> {
+
+    /* RETORNAMOS O DADO ATUALIZADO PARA USUARIO E O TOKEN */
+    return this.http.put<Tema>(`${this.serverPort}/tema`, tema, this.autorizacao);
+  }
+
+  /* CRIA UM METODO DELETE QUE DELETA UM DADO INFORMADO PELO USUARIO, PASSANDO COMO PARAMTRO UM ID */
+  deleteTema(id: number) {
+
+    /* DELETA O DADO DA BASE DE DADOS */
+    return this.http.delete(`${this.serverPort}/tema/${id}`, this.autorizacao);
   }
 
 }
