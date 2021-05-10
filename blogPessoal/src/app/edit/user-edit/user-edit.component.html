@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="col-md-6 mt-5 mb-5 ajuste-760px">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-10">
+                <h1 class="text-center">Atualizar meu usuário</h1>
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <!-- [(ngModel)] ==> AMAZENA OS DADOS INSERIDOS PELO USUARIO DENTRO DA MODEL -->
+                    <input [(ngModel)]='usuario.nome' class="form-control" type="text" name="nome" id="nome" placeholder="Nome">
+                </div>
+                <div class="form-group">
+                    <label for="usuario">Usuário</label>
+                    <!-- [(ngModel)] ==> AMAZENA OS DADOS INSERIDOS PELO USUARIO DENTRO DA MODEL -->
+                    <input [(ngModel)]='usuario.usuario' class="form-control" type="text" name="usuario" id="usuario" placeholder="Usuário">
+                </div>
+                <div class="form-group">
+                    <label for="foto">Link da foto</label>
+                    <!-- [(ngModel)] ==> AMAZENA OS DADOS INSERIDOS PELO USUARIO DENTRO DA MODEL -->
+                    <input [(ngModel)]='usuario.foto' class="form-control" type="text" name="foto" id="foto" placeholder="Link de seu perfil">
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <!-- (input) ==> CHAMA UM METODO PARA CONFIRMAR A SENHA, QUE POR SUA VEZ RECEBEU UM VALOR DE confirmeSenha PARA QUE OS DOIS FVALORES POSSAM SER COMPARADOS E VALIDADOS -->
+                    <input (input)='confirmeSenha($event)' class="form-control" type="password" name="senha" id="senha" placeholder="Senha">
+                </div>
+                <div class="form-group">
+                    <label for="confirmeSenha">Confirmar Senha</label>
+                    <!-- [(ngModel)] ==> AMAZENA OS DADOS INSERIDOS PELO USUARIO DENTRO DA MODEL -->
+                    <input [(ngModel)]='usuario.senha' class="form-control" type="password" name="confirmeSenha" id="confirmeSenha" placeholder="Confirme sua Senha">
+                </div>
+                <div class="form-group">
+                    <label for="tipo">Tipo de Usuário</label>
+                    <!-- (change) ==> OBSERVA QUANDO UM VALOR E ALTERADO, CHAMANDO UM EVENTO E ARMAZENANDO ESSE VALOR SELECIONADO A VARIAVEL CONTIDA DENTRO DO METODO -->
+                    <select class="form-control" name="tipo" id="tipo" (change)='tipoUser($event)'>
+                        <option>Selecione um tipo de Usuário</option>
+                        <option value="normal">Normal</option>
+                        <option value="adm">Administador</option>
+                    </select>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="botao mr-4" routerLink="/home">Cancelar</button>
+                    <!-- (click) ==> CHAMA UM METODO PARA REALIZAR O CADASTRO DENTRO DA APLICACAO, VALIDANDO OS DADOS INSERIDOS -->
+                    <button (mouseover)='botaoCadastrarAnimacaoOver()' (mouseout)='botaoCadastrarAnimacaoOut()' type="submit" class="botao" id="botaoCadastrar" (click)='atualizar()'>Atualizar</button>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -13,6 +13,7 @@ export class MenuComponent implements OnInit {
   /* DESSA FORMA POR MEIO DE INTERPOLACAO, CONSEGUIMOS REFERENCIAR ESSE DADOS DENTRO DE NOSSO HTML {{nome_variavel}} */
   nome = environment.nome;
   foto = environment.foto;
+  id = environment.id;
 
   constructor(
     private router: Router
