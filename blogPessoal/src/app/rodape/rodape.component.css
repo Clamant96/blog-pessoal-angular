@@ -41,3 +41,17 @@
     font-family: 'Amaranth', sans-serif;
 
 }
+
+.text-light {
+  text-decoration: none;
+
+  transition: color, .3s ease-in-out;
+
+}
+
+.text-light:hover {
+  text-decoration: none;
+
+  color: var(--background-color-button) !important;
+
+}

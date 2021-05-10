@@ -65,6 +65,34 @@
 
 }
 
+.botao-editar {
+  background-color: var(--background-color-button) !important;
+
+  color: var(--text-white) !important;
+
+}
+
+.botao-editar:hover {
+  background-color: var(--background-color-button-hover) !important;
+
+  color: var(--text-white) !important;
+
+}
+
+.botao-apagar {
+  background-color: var(--background-color-danger) !important;
+
+  color: var(--text-white) !important;
+
+}
+
+.botao-apagar:hover {
+  background-color: var(--background-color-danger-hover) !important;
+
+  color: var(--text-white) !important;
+
+}
+
 @media(max-width: 600px){
   .texto-responsivo {
     display: flex;
