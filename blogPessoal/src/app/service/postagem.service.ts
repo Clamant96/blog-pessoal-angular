@@ -48,4 +48,14 @@ export class PostagemService {
     return this.http.post<Postagem>(`${this.endereco}/postagens`, postagem, this.autorizacao);
   }
 
+  putPostagem(postagem: Postagem): Observable<Postagem> {
+
+    return this.http.put<Postagem>(`${this.endereco}/postagens`, postagem, this.autorizacao);
+  }
+
+  deletePostagem(id: number) {
+
+    return this.http.delete<Postagem>(`${this.endereco}/postagens/${id}`, this.autorizacao);
+  }
+
 }
