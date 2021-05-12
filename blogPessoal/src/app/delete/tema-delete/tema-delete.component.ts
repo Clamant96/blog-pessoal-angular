@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Tema } from 'src/app/model/Tema';
+import { AlertasService } from 'src/app/service/alertas.service';
 import { TemaService } from 'src/app/service/tema.service';
 import { environment } from 'src/environments/environment.prod';
 
@@ -21,7 +22,9 @@ export class TemaDeleteComponent implements OnInit {
     private temaService: TemaService,
     private router: Router,
     /* RESPOSAVEL POR CAPTURAR PARAMETROS CONTIDOS DENTRO DA URL */
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private alertas: AlertasService
+
   ) { }
 
   ngOnInit() {
@@ -53,7 +56,7 @@ export class TemaDeleteComponent implements OnInit {
   /* O DADO E CONERTIDO E EXCLUIDO DO SISTEMA, RETORNANDO AO USUARIO UMA MENSAGEM DE EXCLUSAO REALIZADA COM SUCESSO */
   apagar() {
     this.temaService.deleteTema(this.idTema).subscribe(() => {
-      alert('Item excluido com sucesso!');
+      this.alertas.showAlertSuccess('Item excluido com sucesso!');
 
       this.router.navigate(['/tema']);
 

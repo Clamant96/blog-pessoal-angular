@@ -17,6 +17,8 @@ import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component'
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
+import { AlertasComponent } from './alertas/alertas.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [
@@ -31,14 +33,18 @@ import { UserEditComponent } from './edit/user-edit/user-edit.component';
     TemaDeleteComponent,
     PostagemEditComponent,
     PostagemDeleteComponent,
-    UserEditComponent
+    UserEditComponent,
+    AlertasComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     /* IMPORTA O FormsModule ==> PARA QUE SE POSSA UTILIZAR O ngModel DENTRO DO HTML */
-    FormsModule
+    FormsModule,
+    /* HABILITA O MODAL EM NOSSA APLICACAO, SE NAO SERA GERADO UM ERRO */
+    /* O ROOT E PQ ELE ATUA NA RAIS DO PROJETO */
+    ModalModule.forRoot()
   ],
   /* CRIAMOS ESSE PROVIDER, PARA FAZER COM QUE O ANGULAR CONSIGA MAPEGAR A ENTRUTURA DA PAGINA, E NAO SE PERDER EM ACESSOS DE ANCORAMENTO PARA NAVEGACAO DA APLICACAO */
   providers: [{

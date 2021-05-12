@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from '../model/User';
+import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
 
 @Component({
@@ -20,7 +21,8 @@ export class CadastrarComponent implements OnInit {
   constructor(
     /* INGETA AS DEPENDENCIAS PARA O COMPONENTE */
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    private alertas: AlertasService
 
   ) { }
 
@@ -50,7 +52,7 @@ export class CadastrarComponent implements OnInit {
     /* VERIFICA SE AS SENHAS DIGITADAS, SAO IGUAIS */
     if(this.usuario.senha != this.confirmarSenha) {
       /* INFORMA UM ALERTA AO USUARIO */
-      alert('As senhas estao incorretas!');
+      this.alertas.showAlertDanger('As senhas estao incorretas!');
 
     }else {
       /* CHAMA O METODO CADASTRAR CRIADO NO NOSSO SERVICE */
@@ -62,15 +64,15 @@ export class CadastrarComponent implements OnInit {
         /* REDIRECIONA O USUARIO A PAGINA DE login APOS O CADASTRO TER SIDO REALIZADO COM SUCESSO */
         this.router.navigate(['/login']);
         /* INFORMA UM ALERTA AO USUARIO DE CADASTRO BEM SUCEDIDO */
-        alert('Usuario cadastrado com sucesso!');
-      
+        this.alertas.showAlertSuccess('Usuario cadastrado com sucesso!');
+
         /* CASO OCORRA UMA MENSAGEM DE ERRO, MOSTRA ESSE ERRO NO CONSOLE */
       }, erro => {
         console.log(erro.status);
         console.log(erro);
 
       });
-      
+
     }
 
   }

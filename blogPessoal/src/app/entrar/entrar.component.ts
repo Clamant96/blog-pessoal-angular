@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { UserLogin } from '../model/UserLogin';
+import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
 
 @Component({
@@ -17,7 +18,8 @@ export class EntrarComponent implements OnInit {
   constructor(
     /* INGETA AS DEPENDENCIAS PARA O COMPONENTE */
     private auth: AuthService,
-    private router: Router
+    private router: Router,
+    private alertar: AlertasService
   ) { }
 
   /* QUANDO MINHA PAGINA INICIALIZAR FACA ISSO */
@@ -36,7 +38,7 @@ export class EntrarComponent implements OnInit {
       environment.nome = this.userLogin.nome;
       environment.foto = this.userLogin.foto;
       environment.id = this.userLogin.id;
-      
+
       console.log('Token: '+ environment.token);
       console.log('Nome: '+ environment.nome);
       console.log('Foto: '+ environment.foto);
@@ -48,7 +50,7 @@ export class EntrarComponent implements OnInit {
       /*  TRAZ UMA MENSAGEM DE ERRO, CASO OS DADOS NAO SEJAM VALIDOS*/
     }, erro => {
       if(erro.status == 500) {
-        alert('Usuario ou senha estao incorretos.');
+        this.alertar.showAlertDanger('Usuario ou senha estao incorretos.');
 
       }
     })

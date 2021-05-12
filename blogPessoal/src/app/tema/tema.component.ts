@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Tema } from '../model/Tema';
+import { AlertasService } from '../service/alertas.service';
 import { TemaService } from '../service/tema.service';
 
 @Component({
@@ -18,7 +19,8 @@ export class TemaComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private temaService: TemaService
+    private temaService: TemaService,
+    private alertas: AlertasService
 
   ) { }
 
@@ -58,7 +60,7 @@ export class TemaComponent implements OnInit {
       /* PEGA ESSE Objeto(JSON) E INSERE DENTRO DO Objeto tema, INSERINDO ESSE DADOS NA BASE DE DADOS */
       this.tema = resp;
       /* RETORNA UMA RESPOSTA AO USUARIO */
-      alert('Tema cadastrado com sucesso.');
+      this.alertas.showAlertSuccess('Tema cadastrado com sucesso.');
       /* SEMPRE QUE HOUVER UM NOVO DADO, ATUALIZE MINHA LISTA DE TEMAS */
       this.findAllTemas();
       /* INSTANCIA UM NOVO Objeto Tema, PARA QUE POSSA SER ZERADO OS DADOS ANTERIORES E COMECAR UM NOVO CADASTRO */

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Tema } from 'src/app/model/Tema';
+import { AlertasService } from 'src/app/service/alertas.service';
 import { TemaService } from 'src/app/service/tema.service';
 import { environment } from 'src/environments/environment.prod';
 
@@ -19,7 +20,8 @@ export class TemaEditComponent implements OnInit {
     private temaService: TemaService,
     private router: Router,
     /* RESPOSAVEL POR ACESSAR A URL E CAPITURAR O PARAMETRO QUE ESTA SENDO TRABALHADO NO MOMENTO */
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private alertas: AlertasService
 
   ) { }
 
@@ -57,7 +59,7 @@ export class TemaEditComponent implements OnInit {
   atualizar() {
     this.temaService.putTema(this.tema).subscribe((resp: Tema) => {
       this.tema = resp;
-      alert('Tema atualizado com sucesso!');
+      this.alertas.showAlertSuccess('Tema atualizado com sucesso!');
 
       this.router.navigate(['/tema']);
 

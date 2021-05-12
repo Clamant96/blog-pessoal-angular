@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { User } from 'src/app/model/User';
+import { AlertasService } from 'src/app/service/alertas.service';
 import { AuthService } from 'src/app/service/auth.service';
 import { environment } from 'src/environments/environment.prod';
 
@@ -19,7 +20,8 @@ export class UserEditComponent implements OnInit {
   constructor(
     private authService: AuthService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private alertas: AlertasService
 
   ) { }
 
@@ -64,7 +66,7 @@ export class UserEditComponent implements OnInit {
     /* VERIFICA SE AS SENHAS DIGITADAS, SAO IGUAIS */
     if(this.usuario.senha != this.confirmarSenha) {
       /* INFORMA UM ALERTA AO USUARIO */
-      alert('As senhas estao incorretas!');
+      this.alertas.showAlertDanger('As senhas estao incorretas!');
 
     }else {
       /* CHAMA O METODO CADASTRAR CRIADO NO NOSSO SERVICE */
@@ -74,7 +76,7 @@ export class UserEditComponent implements OnInit {
         /* POR SUA VEZ ATRIBUI OS DADOS DE resp AO USUARIO DENTRO DA BASE DE DADOS*/
         this.usuario = resp;
         /* INFORMA UM ALERTA AO USUARIO DE CADASTRO BEM SUCEDIDO */
-        alert('Dados atualizados com sucesso, faça login novamente!');
+        this.alertas.showAlertSuccess('Dados atualizados com sucesso, faça login novamente!');
 
         environment.token = ''; // ARMAZENA TOKEN PARA QUE POSSAMOS VALIDAR O ACESSO DO USUARIO NO SISTEMA
         environment.nome = '';
