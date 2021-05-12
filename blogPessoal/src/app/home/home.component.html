@@ -22,7 +22,8 @@
 
 <div class="container texto habilitar-resposivo">
     <div class="botoes">
-        <button class="botao" data-toggle="modal" data-target="#novaPostagem">Nova Postagem</button>
+        <!-- CASO O USUARIO SEJA ADM, MOSTRA ESSA OPCAO CASO CONTRARIO NAO -->
+        <button *ngIf='authService.adm()' class="botao" data-toggle="modal" data-target="#novaPostagem">Nova Postagem</button>
         <a class="botao-outline" href="#postagens">Ver Postagens</a>
     </div>
 </div>

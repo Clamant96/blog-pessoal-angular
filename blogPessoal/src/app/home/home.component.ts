@@ -36,7 +36,8 @@ export class HomeComponent implements OnInit {
     private router: Router,
     private postagemService: PostagemService,
     private temaService: TemaService,
-    private authService: AuthService,
+    /* TEM QUE DEIXAR PUBLICO PARA ACESSAR EM UM HTML EXTERNO E MOSTRAR INFORMACOES SOMENTE PARA PESSOAS ADMs */
+    public authService: AuthService,
     private alertas: AlertasService
 
   ) { }

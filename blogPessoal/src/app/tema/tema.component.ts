@@ -37,6 +37,13 @@ export class TemaComponent implements OnInit {
 
     }
 
+    if(environment.tipo != 'adm') {
+      this.alertas.showAlertInfo('Você precisa ser ADM para acessar essa rota!');
+
+      this.router.navigate(['/home']);
+
+    }
+
     /* INICIALIZA O METODO SEMPRE QUE O COMPONENT TEMA FOR CHAMADO */
     this.findAllTemas();
 

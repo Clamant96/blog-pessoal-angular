@@ -51,6 +51,22 @@ export class AuthService {
     return ok;
   }
 
+  adm() {
+    /* CRIA UMA VARIAVEL BOOLEAN */
+    let ok: boolean = false;
+
+    /* CRIA UMA CONDIZIONAL, QUE VERIFICA SE O USUARIO E ADM */
+    if(environment.tipo == 'adm') {
+      /* ATRIBUI 'true' A VARAIVEL 'ok' */
+      ok = true;
+
+    }
+
+    /* RETORNA O VALOR DA VARIAVEL */
+    return ok;
+
+  }
+
   /* RETORNA UM USUARIO POR MEIO DO ID */
   findByIdUsuario(id: number): Observable<User> {
 

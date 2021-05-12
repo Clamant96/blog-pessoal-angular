@@ -30,6 +30,7 @@
                     <!-- [(ngModel)] ==> AMAZENA OS DADOS INSERIDOS PELO USUARIO DENTRO DA MODEL -->
                     <input [(ngModel)]='usuario.senha' class="form-control" type="password" name="confirmeSenha" id="confirmeSenha" placeholder="Confirme sua Senha">
                 </div>
+                <!-- *ngIf='authService.funcaoADM()' -->
                 <div class="form-group">
                     <label for="tipo">Tipo de Usuário</label>
                     <!-- (change) ==> OBSERVA QUANDO UM VALOR E ALTERADO, CHAMANDO UM EVENTO E ARMAZENANDO ESSE VALOR SELECIONADO A VARIAVEL CONTIDA DENTRO DO METODO -->
