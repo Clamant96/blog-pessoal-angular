@@ -1,0 +1,984 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>blog-pessoal documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">blog-pessoal documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>CadastrarComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/cadastrar/cadastrar.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-cadastrar</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./cadastrar.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./cadastrar.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#confirmarSenha">confirmarSenha</a>
+                            </li>
+                            <li>
+                                <a href="#tipoUsuario">tipoUsuario</a>
+                            </li>
+                            <li>
+                                <a href="#usuario">usuario</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#botaoCadastrarAnimacaoOut">botaoCadastrarAnimacaoOut</a>
+                            </li>
+                            <li>
+                                <a href="#botaoCadastrarAnimacaoOver">botaoCadastrarAnimacaoOver</a>
+                            </li>
+                            <li>
+                                <a href="#cadastrar">cadastrar</a>
+                            </li>
+                            <li>
+                                <a href="#confirmeSenha">confirmeSenha</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#tipoUser">tipoUser</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(authService: <a href="../injectables/AuthService.html">AuthService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, alertas: <a href="../injectables/AlertasService.html">AlertasService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/cadastrar/cadastrar.component.ts:19</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>authService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AuthService.html" target="_self" >AuthService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>alertas</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AlertasService.html" target="_self" >AlertasService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="botaoCadastrarAnimacaoOut"></a>
+                    <span class="name">
+                        <b>
+                            botaoCadastrarAnimacaoOut
+                        </b>
+                        <a href="#botaoCadastrarAnimacaoOut"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>botaoCadastrarAnimacaoOut()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="87"
+                            class="link-to-prism">src/app/cadastrar/cadastrar.component.ts:87</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="botaoCadastrarAnimacaoOver"></a>
+                    <span class="name">
+                        <b>
+                            botaoCadastrarAnimacaoOver
+                        </b>
+                        <a href="#botaoCadastrarAnimacaoOver"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>botaoCadastrarAnimacaoOver()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="81"
+                            class="link-to-prism">src/app/cadastrar/cadastrar.component.ts:81</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="cadastrar"></a>
+                    <span class="name">
+                        <b>
+                            cadastrar
+                        </b>
+                        <a href="#cadastrar"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>cadastrar()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="48"
+                            class="link-to-prism">src/app/cadastrar/cadastrar.component.ts:48</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="confirmeSenha"></a>
+                    <span class="name">
+                        <b>
+                            confirmeSenha
+                        </b>
+                        <a href="#confirmeSenha"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>confirmeSenha(event: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="36"
+                            class="link-to-prism">src/app/cadastrar/cadastrar.component.ts:36</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="30"
+                            class="link-to-prism">src/app/cadastrar/cadastrar.component.ts:30</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="tipoUser"></a>
+                    <span class="name">
+                        <b>
+                            tipoUser
+                        </b>
+                        <a href="#tipoUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>tipoUser(event: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="42"
+                            class="link-to-prism">src/app/cadastrar/cadastrar.component.ts:42</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="confirmarSenha"></a>
+                        <span class="name">
+                            <b>
+                            confirmarSenha</b>
+                            <a href="#confirmarSenha"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/cadastrar/cadastrar.component.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="tipoUsuario"></a>
+                        <span class="name">
+                            <b>
+                            tipoUsuario</b>
+                            <a href="#tipoUsuario"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/cadastrar/cadastrar.component.ts:19</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="usuario"></a>
+                        <span class="name">
+                            <b>
+                            usuario</b>
+                            <a href="#usuario"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/User.html" target="_self" >User</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new User()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/cadastrar/cadastrar.component.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+import { User } from &#x27;../model/User&#x27;;
+import { AlertasService } from &#x27;../service/alertas.service&#x27;;
+import { AuthService } from &#x27;../service/auth.service&#x27;;
+
+@Component({
+  selector: &#x27;app-cadastrar&#x27;,
+  templateUrl: &#x27;./cadastrar.component.html&#x27;,
+  styleUrls: [&#x27;./cadastrar.component.css&#x27;]
+})
+export class CadastrarComponent implements OnInit {
+
+  /* INSTANCIA UM NOVO USUARIO PARA SER CADASTRADO */
+  usuario: User &#x3D; new User();
+  /* CRIA UM ATRIBUTO PARA ARMAZENAR A SENHA DIGITADA */
+  confirmarSenha: string;
+  /* CRIA UM ATRIBUTO PARA RECEBER UM TIPO DE USUARIO AO CHAMAR UM EVENTO ESPECIFICO */
+  tipoUsuario: string;
+
+  constructor(
+    /* INGETA AS DEPENDENCIAS PARA O COMPONENTE */
+    private authService: AuthService,
+    private router: Router,
+    private alertas: AlertasService
+
+  ) { }
+
+  /* QUANDO MINHA PAGINA INICIALIZAR FACA ISSO */
+  ngOnInit() {
+    // FAZ COM QUE O SCROLL SEMPRE FIQUE NO TOPO DA TELA AO INICIALIZAR A APLICACAO
+    window.scroll(0,0)
+  }
+
+  /* VERIFICA SE A SENHA CRIADA E MESMA DE CONFIRME SENHA */
+  confirmeSenha(event: any) {
+    /* ATRIBUI O DADO VINDO DO HTML POR MEIO DO [(ngModel)] A VARIAVEL CRIADA */
+    this.confirmarSenha &#x3D; event.target.value;
+
+  }
+
+  tipoUser(event: any) {
+    /* ATRIBUI O DADO VINDO DO HTML POR MEIO DO [(ngModel)] A VARIAVEL CRIADA */
+    this.tipoUsuario &#x3D; event.target.value;
+
+  }
+
+  cadastrar() {
+    /* INSERE O TIPO DE USUARIO SELECIONADO, AO ATRIBUTO NA BASE DE DADOS */
+    this.usuario.tipo &#x3D; this.tipoUsuario;
+
+    /* VERIFICA SE AS SENHAS DIGITADAS, SAO IGUAIS */
+    if(this.usuario.senha !&#x3D; this.confirmarSenha) {
+      /* INFORMA UM ALERTA AO USUARIO */
+      this.alertas.showAlertDanger(&#x27;As senhas estao incorretas!&#x27;);
+
+    }else {
+      /* CHAMA O METODO CADASTRAR CRIADO NO NOSSO SERVICE */
+      /* subscribe &#x3D;&#x3D;&gt; CONVERTE UM ARQUIVO TypeScript EM UM ARQUIVO JSON/JavaScript */
+      /* ARMAZENA OS DADOS DENTRO DE UM ATRIBUTO TEMPORARIO CHAMADO resp */
+      this.authService.cadastrar(this.usuario).subscribe((resp: User) &#x3D;&gt; {
+        /* POR SUA VEZ ATRIBUI OS DADOS DE resp AO USUARIO DENTRO DA BASE DE DADOS*/
+        this.usuario &#x3D; resp;
+        /* REDIRECIONA O USUARIO A PAGINA DE login APOS O CADASTRO TER SIDO REALIZADO COM SUCESSO */
+        this.router.navigate([&#x27;/login&#x27;]);
+        /* INFORMA UM ALERTA AO USUARIO DE CADASTRO BEM SUCEDIDO */
+        this.alertas.showAlertSuccess(&#x27;Usuario cadastrado com sucesso!&#x27;);
+
+        /* CASO OCORRA UMA MENSAGEM DE ERRO, MOSTRA ESSE ERRO NO CONSOLE */
+      }, erro &#x3D;&gt; {
+        console.log(erro.status);
+        console.log(erro);
+
+      });
+
+    }
+
+  }
+
+  /* ANIMACAO */
+  botaoCadastrarAnimacaoOver(){
+    window.document.querySelector(&#x27;#botaoCadastrar&#x27;)?.setAttribute(&#x27;style&#x27;, &#x27;background-color: #c3c3c3 !important;&#x27;)
+
+  }
+
+  /* ANIMACAO */
+  botaoCadastrarAnimacaoOut(){
+    window.document.querySelector(&#x27;#botaoCadastrar&#x27;)?.setAttribute(&#x27;style&#x27;, &#x27;background-color: var(--background-color-button) !important;&#x27;)
+
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container-fluid&quot;&gt;
+    &lt;div class&#x3D;&quot;row&quot;&gt;
+        &lt;div class&#x3D;&quot;col-md-6 img-bg&quot;&gt;
+            
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;col-md-6 mt-5 mb-5 ajuste-760px&quot;&gt;
+            &lt;div class&#x3D;&quot;row d-flex justify-content-center&quot;&gt;
+                &lt;div class&#x3D;&quot;col-md-10&quot;&gt;
+                    &lt;h1 class&#x3D;&quot;text-center&quot;&gt;Cadastro&lt;/h1&gt;
+                    &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                        &lt;label for&#x3D;&quot;nome&quot;&gt;Nome&lt;/label&gt;
+                        &lt;!-- [(ngModel)] &#x3D;&#x3D;&gt; AMAZENA OS DADOS INSERIDOS PELO USUARIO DENTRO DA MODEL --&gt;
+                        &lt;input [(ngModel)]&#x3D;&#x27;usuario.nome&#x27; class&#x3D;&quot;form-control&quot; type&#x3D;&quot;text&quot; name&#x3D;&quot;nome&quot; id&#x3D;&quot;nome&quot; placeholder&#x3D;&quot;Nome&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                        &lt;label for&#x3D;&quot;usuario&quot;&gt;Usuário&lt;/label&gt;
+                        &lt;!-- [(ngModel)] &#x3D;&#x3D;&gt; AMAZENA OS DADOS INSERIDOS PELO USUARIO DENTRO DA MODEL --&gt;
+                        &lt;input [(ngModel)]&#x3D;&#x27;usuario.usuario&#x27; class&#x3D;&quot;form-control&quot; type&#x3D;&quot;text&quot; name&#x3D;&quot;usuario&quot; id&#x3D;&quot;usuario&quot; placeholder&#x3D;&quot;Usuário&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                        &lt;label for&#x3D;&quot;foto&quot;&gt;Link da foto&lt;/label&gt;
+                        &lt;!-- [(ngModel)] &#x3D;&#x3D;&gt; AMAZENA OS DADOS INSERIDOS PELO USUARIO DENTRO DA MODEL --&gt;
+                        &lt;input [(ngModel)]&#x3D;&#x27;usuario.foto&#x27; class&#x3D;&quot;form-control&quot; type&#x3D;&quot;text&quot; name&#x3D;&quot;foto&quot; id&#x3D;&quot;foto&quot; placeholder&#x3D;&quot;Link de seu perfil&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                        &lt;label for&#x3D;&quot;senha&quot;&gt;Senha&lt;/label&gt;
+                        &lt;!-- (input) &#x3D;&#x3D;&gt; CHAMA UM METODO PARA CONFIRMAR A SENHA, QUE POR SUA VEZ RECEBEU UM VALOR DE confirmeSenha PARA QUE OS DOIS FVALORES POSSAM SER COMPARADOS E VALIDADOS --&gt;
+                        &lt;input (input)&#x3D;&#x27;confirmeSenha($event)&#x27; class&#x3D;&quot;form-control&quot; type&#x3D;&quot;password&quot; name&#x3D;&quot;senha&quot; id&#x3D;&quot;senha&quot; placeholder&#x3D;&quot;Senha&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                        &lt;label for&#x3D;&quot;confirmeSenha&quot;&gt;Confirmar Senha&lt;/label&gt;
+                        &lt;!-- [(ngModel)] &#x3D;&#x3D;&gt; AMAZENA OS DADOS INSERIDOS PELO USUARIO DENTRO DA MODEL --&gt;
+                        &lt;input [(ngModel)]&#x3D;&#x27;usuario.senha&#x27; class&#x3D;&quot;form-control&quot; type&#x3D;&quot;password&quot; name&#x3D;&quot;confirmeSenha&quot; id&#x3D;&quot;confirmeSenha&quot; placeholder&#x3D;&quot;Confirme sua Senha&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                        &lt;label for&#x3D;&quot;tipo&quot;&gt;Tipo de Usuário&lt;/label&gt;
+                        &lt;!-- (change) &#x3D;&#x3D;&gt; OBSERVA QUANDO UM VALOR E ALTERADO, CHAMANDO UM EVENTO E ARMAZENANDO ESSE VALOR SELECIONADO A VARIAVEL CONTIDA DENTRO DO METODO --&gt;
+                        &lt;select class&#x3D;&quot;form-control&quot; name&#x3D;&quot;tipo&quot; id&#x3D;&quot;tipo&quot; (change)&#x3D;&#x27;tipoUser($event)&#x27;&gt;
+                            &lt;option&gt;Selecione um tipo de Usuário&lt;/option&gt;
+                            &lt;option value&#x3D;&quot;normal&quot;&gt;Normal&lt;/option&gt;
+                            &lt;option value&#x3D;&quot;adm&quot;&gt;Administador&lt;/option&gt;
+                        &lt;/select&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;d-flex justify-content-center&quot;&gt;
+                        &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;botao mr-4&quot; routerLink&#x3D;&quot;/login&quot;&gt;Cancelar&lt;/button&gt;
+                        &lt;!-- (click) &#x3D;&#x3D;&gt; CHAMA UM METODO PARA REALIZAR O CADASTRO DENTRO DA APLICACAO, VALIDANDO OS DADOS INSERIDOS --&gt;
+                        &lt;button (mouseover)&#x3D;&#x27;botaoCadastrarAnimacaoOver()&#x27; (mouseout)&#x3D;&#x27;botaoCadastrarAnimacaoOut()&#x27; type&#x3D;&quot;submit&quot; class&#x3D;&quot;botao&quot; id&#x3D;&quot;botaoCadastrar&quot; (click)&#x3D;&#x27;cadastrar()&#x27;&gt;Cadastrar&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./cadastrar.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.img-bg {
+    background-image: url(https://i.imgur.com/iuaLq7p.jpg);
+
+    min-height: 100vh;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.botao {
+    padding: 1% 5%;
+
+    background-color: var(--background-color-button);
+
+    border: none;
+    border-radius: 5px;
+
+    color: var(--text-white);
+
+    font-weight: 600;
+
+    transition: background-color, color, .3s ease;
+
+    font-family: &#x27;Amaranth&#x27;, sans-serif;
+
+}
+
+.botao:hover {
+    background-color: var(--background-color-button-hover);
+
+    color: var(--text-white-light);
+
+}
+
+label {
+    font-weight: 600;
+    font-family: &#x27;Amaranth&#x27;, sans-serif;
+
+}
+
+input, option, select {
+    font-weight: 100;
+    font-family: &#x27;Amaranth&#x27;, sans-serif;
+
+    color: var(--text-input);
+
+}
+
+@media(max-width: 760px){
+    .img-bg {
+        display: none;
+
+    }
+
+    .container-fluid {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        height: 100vh;
+
+    }
+
+    .ajuste-760px, .row {
+        padding: 0 !important;
+        margin: 0 !important;
+
+        height: 100vh;
+
+    }
+
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="container-fluid">    <div class="row">        <div class="col-md-6 img-bg">                    </div>        <div class="col-md-6 mt-5 mb-5 ajuste-760px">            <div class="row d-flex justify-content-center">                <div class="col-md-10">                    <h1 class="text-center">Cadastro</h1>                    <div class="form-group">                        <label for="nome">Nome</label>                        <!-- [(ngModel)] ==> AMAZENA OS DADOS INSERIDOS PELO USUARIO DENTRO DA MODEL -->                        <input [(ngModel)]=\'usuario.nome\' class="form-control" type="text" name="nome" id="nome" placeholder="Nome">                    </div>                    <div class="form-group">                        <label for="usuario">Usuário</label>                        <!-- [(ngModel)] ==> AMAZENA OS DADOS INSERIDOS PELO USUARIO DENTRO DA MODEL -->                        <input [(ngModel)]=\'usuario.usuario\' class="form-control" type="text" name="usuario" id="usuario" placeholder="Usuário">                    </div>                    <div class="form-group">                        <label for="foto">Link da foto</label>                        <!-- [(ngModel)] ==> AMAZENA OS DADOS INSERIDOS PELO USUARIO DENTRO DA MODEL -->                        <input [(ngModel)]=\'usuario.foto\' class="form-control" type="text" name="foto" id="foto" placeholder="Link de seu perfil">                    </div>                    <div class="form-group">                        <label for="senha">Senha</label>                        <!-- (input) ==> CHAMA UM METODO PARA CONFIRMAR A SENHA, QUE POR SUA VEZ RECEBEU UM VALOR DE confirmeSenha PARA QUE OS DOIS FVALORES POSSAM SER COMPARADOS E VALIDADOS -->                        <input (input)=\'confirmeSenha($event)\' class="form-control" type="password" name="senha" id="senha" placeholder="Senha">                    </div>                    <div class="form-group">                        <label for="confirmeSenha">Confirmar Senha</label>                        <!-- [(ngModel)] ==> AMAZENA OS DADOS INSERIDOS PELO USUARIO DENTRO DA MODEL -->                        <input [(ngModel)]=\'usuario.senha\' class="form-control" type="password" name="confirmeSenha" id="confirmeSenha" placeholder="Confirme sua Senha">                    </div>                    <div class="form-group">                        <label for="tipo">Tipo de Usuário</label>                        <!-- (change) ==> OBSERVA QUANDO UM VALOR E ALTERADO, CHAMANDO UM EVENTO E ARMAZENANDO ESSE VALOR SELECIONADO A VARIAVEL CONTIDA DENTRO DO METODO -->                        <select class="form-control" name="tipo" id="tipo" (change)=\'tipoUser($event)\'>                            <option>Selecione um tipo de Usuário</option>                            <option value="normal">Normal</option>                            <option value="adm">Administador</option>                        </select>                    </div>                    <div class="d-flex justify-content-center">                        <button type="submit" class="botao mr-4" routerLink="/login">Cancelar</button>                        <!-- (click) ==> CHAMA UM METODO PARA REALIZAR O CADASTRO DENTRO DA APLICACAO, VALIDANDO OS DADOS INSERIDOS -->                        <button (mouseover)=\'botaoCadastrarAnimacaoOver()\' (mouseout)=\'botaoCadastrarAnimacaoOut()\' type="submit" class="botao" id="botaoCadastrar" (click)=\'cadastrar()\'>Cadastrar</button>                    </div>                </div>            </div>        </div>    </div></div></div>'
+    var COMPONENTS = [{'name': 'AlertasComponent', 'selector': 'app-alertas'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CadastrarComponent', 'selector': 'app-cadastrar'},{'name': 'EntrarComponent', 'selector': 'app-entrar'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'MenuComponent', 'selector': 'app-menu'},{'name': 'PostagemDeleteComponent', 'selector': 'app-postagem-delete'},{'name': 'PostagemEditComponent', 'selector': 'app-postagem-edit'},{'name': 'RodapeComponent', 'selector': 'app-rodape'},{'name': 'TemaComponent', 'selector': 'app-tema'},{'name': 'TemaDeleteComponent', 'selector': 'app-tema-delete'},{'name': 'TemaEditComponent', 'selector': 'app-tema-edit'},{'name': 'UserEditComponent', 'selector': 'app-user-edit'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'CadastrarComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'CadastrarComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
