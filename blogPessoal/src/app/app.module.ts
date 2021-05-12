@@ -19,6 +19,7 @@ import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delet
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { AlertasComponent } from './alertas/alertas.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { OrderModule } from 'ngx-order-pipe';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,9 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     FormsModule,
     /* HABILITA O MODAL EM NOSSA APLICACAO, SE NAO SERA GERADO UM ERRO */
     /* O ROOT E PQ ELE ATUA NA RAIS DO PROJETO */
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    /* IMPORTA ESSE MODULA PARA PODER ORDERNAR OS ITENS NA APLICACAO (ORDER BY) */
+    OrderModule
   ],
   /* CRIAMOS ESSE PROVIDER, PARA FAZER COM QUE O ANGULAR CONSIGA MAPEGAR A ENTRUTURA DA PAGINA, E NAO SE PERDER EM ACESSOS DE ANCORAMENTO PARA NAVEGACAO DA APLICACAO */
   providers: [{
