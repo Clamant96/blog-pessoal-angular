@@ -29,6 +29,9 @@ export class HomeComponent implements OnInit {
   key = 'data';
   reverse = true;
 
+  tituloPost: string;
+  nomeTema: string;
+
   constructor(
     private router: Router,
     private postagemService: PostagemService,
@@ -143,6 +146,34 @@ export class HomeComponent implements OnInit {
   remover() {
     if(window.document.URL != '/home') {
       window.document.querySelector('.botao-postagem')?.setAttribute('style', 'display: none !important;');
+
+    }
+
+  }
+
+  findAllByTituloPostagem() {
+    if(this.tituloPost == '') {
+      this.findAllByPostagens();
+
+    }else {
+      this.postagemService.findByTituloPostagens(this.tituloPost).subscribe((resp: Postagem[]) => {
+        this.listaDePostagens = resp;
+
+      })
+
+    }
+
+  }
+
+  findAllByNomeTema() {
+    if(this.nomeTema == '') {
+      this.findAllTemas();
+
+    }else {
+      this.temaService.findByNomeTema(this.nomeTema).subscribe((resp: Tema[]) => {
+        this.listaDeTemas = resp;
+
+      })
 
     }
 

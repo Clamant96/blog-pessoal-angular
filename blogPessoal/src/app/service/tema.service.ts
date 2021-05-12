@@ -39,6 +39,12 @@ export class TemaService {
     return this.http.get<Tema>(`${this.serverPort}/tema/${id}`, this.autorizacao);
   }
 
+  /* RETORNAMOS OBJETOS TEMA POR MEIO DE SEU NOME */
+  findByNomeTema(descricao: string): Observable<Tema[]> {
+
+    return this.http.get<Tema[]>(`${this.serverPort}/tema/nome/${descricao}`, this.autorizacao);
+  }
+
   /* CRIA UM METODO POST CADASTRAR UM DADO DENTRO DA BASE DE DADOS, NESSE CASO RECEBEMOS COMO PARATRO UM OBJETO, NO CASO Tema */
   portTema(tema: Tema): Observable<Tema> {
 
